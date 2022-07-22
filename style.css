@@ -25,14 +25,15 @@ nav {
     border: solid red;
     grid-area: nav;
     display: grid;
-    grid-template-columns: 50% auto;
-    grid-template-rows: 50% auto;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
     height: 100%;
     justify-content: center;
     align-items: center;
     grid-template-areas:
     "search profile"
     "welcome btns";
+    padding: 20px;
 }
 
 .searchBar {
@@ -42,6 +43,7 @@ nav {
     align-items: center;
     height: 100%;
     justify-content: flex-start;
+    gap: 20px;
 }
 
 .profileArea {
@@ -50,8 +52,8 @@ nav {
     grid-area: profile;
     display: flex;
     align-items: center;
-    gap: 40px;
-    justify-content: flex-end;
+    gap: 20px;
+    justify-content: center;
 }
 
 .welcomeArea {
@@ -139,7 +141,91 @@ li {
 main {
     border: solid orange;
     grid-area: main;
+    display: flex;
+    padding: 20px;
+
 }
+
+.cardArea {
+    border: solid black;
+    flex: 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 250px;
+}
+
+#titleProj {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.card {
+    border: solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 10px;
+}
+
+.textBlock {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    font-size: 1.5rem;
+    flex: 1;
+}
+
+.iconBlock {
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.annumArea {
+    border: solid blue;
+    flex: 1;
+    display: grid;
+    grid-template-rows: 1fr 0fr;
+
+}
+
+.announcments {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0px 20px 20px 20px;
+    
+}
+
+.announContent {
+    border: solid red;
+    margin-top: 20px;
+    flex: 1;
+    padding: 10px;
+}
+
+.trending {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 20px;
+
+}
+
+.trendContent {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    flex: 1;
+    border: solid orange;
+
+
+}
+
 
 footer {
     border: solid black;
