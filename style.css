@@ -10,7 +10,7 @@ body, html {
 
 .wrapper {
     display: grid;
-    grid-template-columns: 30% auto;
+    grid-template-columns: clamp(300px, 30%, 500px) auto;
     grid-template-rows: 20% auto 10%;
     height: 100%;
     border: solid purple;
