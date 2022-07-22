@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0px;
+    padding: 0px;
     font-family: 'Roboto', sans-serif;
   }
 
@@ -28,6 +29,34 @@ nav {
 aside {
     border: solid blue;
     grid-area: side;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: solid orange;
+    height: 100%;
+}
+
+.list1, .list2 {
+    display: grid;
+    grid-auto-rows: 80px;
+    grid-template-columns: repeat(1, minmax(300px, 500px));
+    gap: 20px;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid red;
+    margin: 0px 20px;
 }
 
 main {
