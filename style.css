@@ -24,6 +24,64 @@ body, html {
 nav {
     border: solid red;
     grid-area: nav;
+    display: grid;
+    grid-template-columns: 50% auto;
+    grid-template-rows: 50% auto;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas:
+    "search profile"
+    "welcome btns";
+}
+
+.searchBar {
+    border: solid blue;
+    grid-area: search;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: flex-start;
+}
+
+.profileArea {
+    border: solid red;
+    height: 100%;
+    grid-area: profile;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: flex-end;
+}
+
+.welcomeArea {
+    border: solid yellow;
+    height: 100%;
+    grid-area: welcome;
+    display: grid;
+    grid-template-columns: 0fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 30px;
+    align-items: center;
+}
+
+#picWelc {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.interactBtns {
+    border: solid green;
+    height: 100%;
+    grid-area: btns;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.interactBtns > button {
+    padding: 20px 40px;
 }
 
 aside {
