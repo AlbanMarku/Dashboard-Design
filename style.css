@@ -1,5 +1,6 @@
 :root {
     --myRed: #EB1D36;
+    --myGrey: #A2B5BB;
 }
 
 * {
@@ -18,7 +19,6 @@ body, html {
     grid-template-columns: clamp(300px, 30%, 500px) auto;
     grid-template-rows: 1fr 4fr 0fr;
     height: 100%;
-    border: solid purple;
     grid-template-areas:
     "side nav"
     "side main"
@@ -26,7 +26,7 @@ body, html {
 }
 
 nav {
-    background-color: #A2B5BB;
+    background-color: var(--myGrey);
     grid-area: nav;
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -38,6 +38,7 @@ nav {
     "search profile"
     "welcome btns";
     padding: 20px;
+
 }
 
 .searchBarArea {
@@ -58,8 +59,8 @@ nav {
     border-radius: 20px;
     border-style: none;
     height: 30px;
+    padding-left: 10px;
 }
-
 .profileArea {
     height: 100%;
     grid-area: profile;
@@ -74,11 +75,21 @@ nav {
 
 #bell {
     width: 35px;
+    cursor: pointer;
 }
 
 .proPic {
     border-radius: 50%;
     width: 60px;
+    cursor: pointer;
+}
+
+.proPic:active, #proNamer:active, #searchIcon:active, #bell:active, button:active {
+    transform: scale(0.9, 0.9);
+}
+
+#proNamer {
+    cursor: pointer;
 }
 
 .welcomeArea {
@@ -121,6 +132,11 @@ nav {
     color: white;
     font-size: 1.2rem;
     font-weight: bold;
+    cursor: pointer;
+}
+
+.interactBtns > button:hover {
+    background-color: #8f1624;
 }
 
 aside {
@@ -192,14 +208,15 @@ main {
     grid-area: main;
     display: flex;
     padding: 20px;
+    
 }
 .cardArea {
-    border: solid black;
     flex: 3;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-template-rows: 50px;
     grid-auto-rows: 250px;
+    gap: 20px;
 }
 
 #titleProj {
@@ -208,11 +225,16 @@ main {
 }
 
 .card {
-    border: solid red;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 0px 10px;
+    border-left: solid var(--myRed);
+    border-left-width: 10px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.315);
+    background-color: #CFD2CF;
 }
 
 .textBlock {
@@ -232,8 +254,20 @@ main {
     
 }
 
+.iconBlock img {
+    width: 45px;
+    margin: 0px 10px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.iconBlock img:hover {
+    background-color: #a1a1a1;
+    cursor: pointer;
+}
+
 .annumArea {
-    border: solid blue;
     flex: 1;
     display: grid;
     grid-template-rows: 50px min-content 50px min-content;
@@ -251,6 +285,12 @@ main {
 
 #title2 {
     grid-area: trend;
+
+}
+
+#title1, #title2 {
+    margin-left: 20px;
+
 }
 
 .announcments {
