@@ -22,7 +22,7 @@ body, html {
 }
 
 nav {
-    border: solid red;
+    background-color: #A2B5BB;
     grid-area: nav;
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -87,14 +87,15 @@ nav {
 }
 
 aside {
-    border: solid blue;
+    background-color: #EB1D36;
+    color: white;
+    font-size: 1.5rem;
     grid-area: side;
     display: flex;
     width: 100%;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
-
 }
 
 img {
@@ -111,7 +112,11 @@ h3 {
     justify-content: flex-start;
     align-items: center;
     gap: 20px;
-    margin: 20px 20px 0px 20px;
+    margin: 40px 20px;
+}
+
+.logo img {
+    width: 90px;
 }
 
 ul {
@@ -134,12 +139,19 @@ li {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    border: solid red;
     margin: 0px 20px;
 }
 
+aside span {
+    padding-left: 20px;
+}
+
+aside img {
+    fill: white;
+}
+
 main {
-    border: solid orange;
+    background-color: #F5EDDC;
     grid-area: main;
     display: flex;
     padding: 20px;
@@ -252,7 +264,7 @@ main {
 
 
 footer {
-    border: solid black;
+    background-color: #CFD2CF;
     grid-area: foot;
     display: flex;
     justify-content: center;
