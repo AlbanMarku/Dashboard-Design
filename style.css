@@ -1,3 +1,7 @@
+:root {
+    --myRed: #EB1D36;
+}
+
 * {
     box-sizing: border-box;
     margin: 0px;
@@ -36,8 +40,7 @@ nav {
     padding: 20px;
 }
 
-.searchBar {
-    border: solid blue;
+.searchBarArea {
     grid-area: search;
     display: flex;
     align-items: center;
@@ -46,48 +49,82 @@ nav {
     gap: 20px;
 }
 
+.searchBarArea img {
+    width: 35px;
+}
+
+#search {
+    flex: 1;
+    border-radius: 20px;
+    border-style: none;
+    height: 30px;
+}
+
 .profileArea {
-    border: solid red;
     height: 100%;
     grid-area: profile;
     display: flex;
     align-items: center;
-    gap: 20px;
-    justify-content: center;
+    gap: 1rem;
+    justify-content: flex-end;
+    color: black;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+#bell {
+    width: 35px;
+}
+
+.proPic {
+    border-radius: 50%;
+    width: 60px;
 }
 
 .welcomeArea {
-    border: solid yellow;
-    height: 100%;
     grid-area: welcome;
+    height: 100%;
     display: grid;
     grid-template-columns: 0fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 0px 30px;
     align-items: center;
+    color: black;
+    font-weight: bold;
 }
 
-#picWelc {
+#welcPic {
     grid-row-start: 1;
-    grid-row-end: 3;
+    grid-row-end: -1;
+}
+
+#welcName {
+    font-size: 1.7rem;
+
 }
 
 .interactBtns {
-    border: solid green;
     height: 100%;
     grid-area: btns;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 0px 20px;
 }
 
 .interactBtns > button {
-    padding: 20px 40px;
+    padding: 10px 0px;
+    background-color: var(--myRed);
+    border-style: none;
+    border-radius: 30px;
+    width: 6rem;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 aside {
-    background-color: #EB1D36;
+    background-color: var(--myRed);
     color: white;
     font-size: 1.5rem;
     grid-area: side;
