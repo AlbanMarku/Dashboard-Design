@@ -12,7 +12,7 @@ body, html {
 .wrapper {
     display: grid;
     grid-template-columns: clamp(300px, 30%, 500px) auto;
-    grid-template-rows: 20% auto 10%;
+    grid-template-rows: 1fr 4fr 0fr;
     height: 100%;
     border: solid purple;
     grid-template-areas:
@@ -143,20 +143,19 @@ main {
     grid-area: main;
     display: flex;
     padding: 20px;
-
 }
-
 .cardArea {
     border: solid black;
     flex: 3;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: 50px;
     grid-auto-rows: 250px;
 }
 
 #titleProj {
     grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-end: -1;
 }
 
 .card {
@@ -188,23 +187,42 @@ main {
     border: solid blue;
     flex: 1;
     display: grid;
-    grid-template-rows: 1fr 0fr;
+    grid-template-rows: 50px min-content 50px min-content;
+    grid-template-areas:
+    "anon"
+    "anonCard"
+    "trend"
+    "trendCard";
+    align-items: start;    
+}
 
+#title1 {
+    grid-area: anon;
+}
+
+#title2 {
+    grid-area: trend;
 }
 
 .announcments {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: center;
     margin: 0px 20px 20px 20px;
+
+    grid-area: anonCard;
     
 }
 
 .announContent {
     border: solid red;
-    margin-top: 20px;
     flex: 1;
     padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .trending {
@@ -214,14 +232,20 @@ main {
     justify-content: center;
     margin: 20px;
 
+    grid-area: trendCard;
+
 }
 
 .trendContent {
     width: 100%;
     padding: 10px;
-    margin-top: 20px;
-    flex: 1;
+    flex: 0;
     border: solid orange;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    
 
 
 }
